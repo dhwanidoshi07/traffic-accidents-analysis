@@ -10,7 +10,7 @@ st.set_page_config(page_title='TRAFFIC ACCIDENTS EXPLORATORY DATA ANALYSIS', lay
 @st.cache_data
 def load_data():
     try:
-        return pd.read_csv("traffic_accidents.csv")
+        return pd.read_csv("traffic_accidents.csv",nrows=100)
     except Exception as e:
         st.error(f"Error loading data: {e}")
         return None
