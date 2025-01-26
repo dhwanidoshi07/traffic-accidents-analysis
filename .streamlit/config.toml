@@ -1,5 +1,2 @@
 [theme]
 base="light"
-
-[server]
-websocket_ping_timeout = 300  # Increase timeout to 5 minutes
