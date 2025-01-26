@@ -7,12 +7,14 @@ import matplotlib.pyplot as plt
 # Set page configuration
 st.set_page_config(page_title='TRAFFIC ACCIDENTS EXPLORATORY DATA ANALYSIS', layout="wide")
 
-# Function to load data with caching
-@st.cache_data  # Use @st.cache for older versions of Streamlit
+@st.cache_data
 def load_data():
-    return pd.read_csv("traffic_accidents.csv")
+    try:
+        return pd.read_csv("traffic_accidents.csv")
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
+        return None
 
-# Load data
 final_data = load_data()
 
 # Introduction Section
