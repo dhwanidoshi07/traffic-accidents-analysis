@@ -170,7 +170,7 @@ with chart_col_bar:
     # Create a bar chart using seaborn or matplotlib with pastel colors
     plt.figure(figsize=(10, 5))
     
-    sns.barplot(x=bar_chart_data.index, y=bar_chart_data.values, palette="pastel")
+    sns.barplot(x=bar_chart_data.index, y=bar_chart_data.values)
     
     plt.xticks(rotation=45)  # Rotate x-axis labels for better readability
     plt.xlabel(selected_metric_bar)
