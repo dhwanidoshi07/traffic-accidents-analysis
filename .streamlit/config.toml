@@ -1,2 +1,5 @@
 [theme]
 base="light"
+
+[server]
+maxMessageSize = 50000000  # Set this to a higher value if needed (in bytes)
