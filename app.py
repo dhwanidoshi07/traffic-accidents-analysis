@@ -16,6 +16,8 @@ def load_data():
         return None
 
 final_data = load_data()
+#final_data = pd.read_csv("traffic_accidents.csv", nrows=100)  # Load only first 100 rows for testing
+
 
 # Introduction Section
 row3_spacer1, row3_1, row3_spacer2 = st.columns((.1, 3.2, .1))
