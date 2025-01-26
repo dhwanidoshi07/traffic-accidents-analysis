@@ -1,4 +1,4 @@
-# import required libraries
+# Import required libraries
 import streamlit as st
 import pandas as pd
 import seaborn as sns
@@ -7,8 +7,13 @@ import matplotlib.pyplot as plt
 # Set page configuration
 st.set_page_config(page_title='TRAFFIC ACCIDENTS EXPLORATORY DATA ANALYSIS', layout="wide")
 
+# Function to load data with caching
+@st.cache_data  # Use @st.cache for older versions of Streamlit
+def load_data():
+    return pd.read_csv("traffic_accidents.csv")
+
 # Load data
-final_data = pd.read_csv("traffic_accidents.csv")
+final_data = load_data()
 
 # Introduction Section
 row3_spacer1, row3_1, row3_spacer2 = st.columns((.1, 3.2, .1))
